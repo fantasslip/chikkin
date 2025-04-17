@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LUCIF3R.exe</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Share+Tech+Mono&display=swap');
+
+    body {
+      margin: 0;
+      background: #0d0d0d;
+      color: #e10600;
+      font-family: 'Share Tech Mono', monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid #e10600;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 0 20px #e10600a0;
+      max-width: 600px;
+      text-align: center;
+      position: relative;
+    }
+
+    .glitch {
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 3em;
+      position: relative;
+      color: #e10600;
+    }
+
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      width: 100%;
+      color: #00ffcc;
+      overflow: hidden;
+      clip: rect(0, 900px, 0, 0);
+    }
+
+    .glitch::before {
+      animation: glitchTop 2s infinite linear alternate-reverse;
+    }
+
+    .glitch::after {
+      color: #ff00cc;
+      animation: glitchBottom 3s infinite linear alternate-reverse;
+    }
+
+    @keyframes glitchTop {
+      0% { clip: rect(0, 9999px, 0, 0); }
+      5% { clip: rect(0, 9999px, 40px, 0); }
+      10% { clip: rect(0, 9999px, 0, 0); }
+      15% { clip: rect(20px, 9999px, 70px, 0); }
+      20% { clip: rect(0, 9999px, 0, 0); }
+      100% { clip: rect(0, 9999px, 0, 0); }
+    }
+
+    @keyframes glitchBottom {
+      0% { clip: rect(0, 9999px, 0, 0); }
+      10% { clip: rect(60px, 9999px, 90px, 0); }
+      15% { clip: rect(0, 9999px, 0, 0); }
+      25% { clip: rect(30px, 9999px, 80px, 0); }
+      30% { clip: rect(0, 9999px, 0, 0); }
+      100% { clip: rect(0, 9999px, 0, 0); }
+    }
+
+    .details {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .details p {
+      margin: 6px 0;
+      color: #ccc;
+    }
+
+    .sigil {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300px;
+      height: 300px;
+      transform: translate(-50%, -50%);
+      opacity: 0.02;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/1/10/Pentacle_1.svg') no-repeat center;
+      background-size: contain;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-style: italic;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="sigil"></div>
+    <div class="glitch" data-text="LUCIF3R.exe">LUCIF3R.exe</div>
+    <p>"Code in blood. Deploy in chaos."</p>
+    <div class="details">
+      <p>✞ C0D3 M4G1C14N</p>
+      <p>✞ Exploit Alchemist</p>
+      <p>📂 lucif3r@protonmail.com</p>
+      <p>🌐 darknet://lucif3r.onion</p>
+      <p>🐍 github.com/lucif3r666</p>
+      <p>🔐 PGP: 0xDEADBEEF</p>
+    </div>
+    <div class="footer">“𝕯𝖔 𝖓𝖔𝖙 𝖘𝖊𝖊𝖐 𝖘𝖆𝖋𝖊𝖙𝖞. 𝕮𝖗𝖊𝖆𝖙𝖊 𝖍𝖆𝖛𝖔𝖈.”</div>
+  </div>
+</body>
+</html>
